@@ -1,0 +1,1 @@
+bConfigurator.getBraceletsPaginated(0,10);
