@@ -1,18 +1,59 @@
+#bracelets{
+	width: 100%;
+	height: 500px;
+	border: 1px solid black;
+	overflow-Y: auto;
+}
+
 #pagination-container{
 	width: 100%;
+}
+
+#pagination-container ul{
+	list-style: none;
+}
+
+#pagination-container ul li{
+	display: inline;
+	padding-right: 5px;
+}
+
+#pagination-container ul li a{
+	text-decoration: none;
+	color: black;
+	font-weight: bold;
+}
+
+#pagination-container ul li a:hover{
+	color: grey;
 }
 
 #data-container{
 	width: 100%;
 }
 
-#loadingDiv{
+#data-container table{
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#data-container table th, #data-container table tr{
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+#data-container table tr:nth-child(even){
+	background-color: #dddddd;
+}
+
+#loadingDiv, #noDataDiv{
 	width: 100%;
 	height: 100%;
 	text-align: center;
 }
 
-#loadingDiv span{
+#loadingDiv span, #noDataDiv span{
     position: absolute;
     top: 50%;
     left: 50%;

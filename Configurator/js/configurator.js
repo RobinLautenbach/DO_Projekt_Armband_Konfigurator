@@ -15,8 +15,13 @@ var bConfigurator = (function($){
 					},
 					complete: function(resp){
 						removeLoadingDiv();
-						console.log("Bracelets in DB:" + resp.getResponseHeader('braceletsInDB'));
-						listBracelets(resp.responseXML);
+						if(resp.getResponseHeader('braceletsInDB') == null){
+							setNoDataDiv();
+						}else
+						{
+							console.log("Bracelets in DB:" + resp.getResponseHeader('braceletsInDB'));
+							listBracelets(resp.responseXML, resp.getResponseHeader('braceletsInDB'));
+						}
 					}
 				});
 			}
@@ -51,28 +56,69 @@ var bConfigurator = (function($){
 	bc.deleteBracelet = function(id){
 		console.log('Delete Bracelet with ID: ' + id);
 	};
-	function addPagination(items){
+	function addPagination(items, itemsInDB){
 		var show_per_page = 10;
-		var number_of_items = items.length;
-		var number_of_pages = Math.ceil(number_of_items/show_per_page);
-		return number_of_pages;
-		/*Coming Soon*/
+		var number_of_pages = Math.ceil(itemsInDB/show_per_page);
+		var current_page = 1;
+		var html = '<ul>';
+		html += '<li><a href="javascript:prev();" id="prev_link">&lt;&lt;</a></li>';
+		for(var i=1;i<=number_of_pages;i++){
+			html += '<li><a href="javascript:goToPage(' + i + ');">' + i + '</a></li>';
+		}
+		html += '<li><a href="javascript:next();" id="next_link">&gt;&gt;</a></li>';
+		html += '</ul>';
+		document.getElementById('pagination-container').innerHTML = html;
+		function prev(){
+			
+		}
+		function next(){
+			
+		}
+		function goToPage(page){
+			
+		}
 	}
-	function template(){
-		/*Coming Soon*/
+	function template(item){
+		var html = '<tr>';
+				html += '<td>' + $(item).attr('id') + '</td>';
+				html += '<td>' + $(item).attr('name') + '</td>';
+				html += '<td>' + $(item).attr('size') + '</td>';
+				html += '<td>' + $(item).attr('model') + '</td>';
+				html += '<td>' + $(item).attr('created') + '</td>';
+				html += '<td><a href="">Edit</a> | <a href="">Delete</a></td>';
+			html += '</tr>';
+		return html;
 	}
-	function listBracelets(xml){
+	function listBracelets(xml, braceletsInDB){
 		var $xml = $(xml);
 		var bracelets = $xml.find('bracelet');
-		console.log('Number of Pages: ' + addPagination(bracelets));
-		$.each(bracelets, function(i,b){console.log(b);});
-		
+		addPagination(bracelets, braceletsInDB);
+		var html = '<table>';
+				html += '<tr>';
+					html += '<th>#ID</th>';
+					html += '<th>Name</th>';
+					html += '<th>Size</th>';
+					html += '<th>Model</th>';
+					html += '<th>Created</th>';
+					html += '<th></th>';
+				html += '</tr>';
+		$.each(bracelets, function(i,b){
+			html += template(b);
+		});
+		html += '</table>';
+		document.getElementById('data-container').innerHTML = html;
 	}
 	function setLoadingDiv(){
 		$('#data-container').append('<div id="loadingDiv"><span>Loading Data...</span></div>');
 	}
 	function removeLoadingDiv(){
 		$('#loadingDiv').remove();
+	}
+	function setNoDataDiv(){
+		$('#data-container').append('<div id="noDataDiv"><span>No Bracelets in DB.</span></div>');
+	}
+	function removeNoDataDiv(){
+		$('#noDataDiv').remove();
 	}
 	return bc;	
 })(jQuery);
