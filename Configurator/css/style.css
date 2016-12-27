@@ -59,3 +59,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(-50%);	
 }
+
+#pagination-container ul li a.active_page{
+	color: blue;
+}
