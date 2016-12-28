@@ -54,7 +54,22 @@ var bConfigurator = (function($){
 		console.log('Add Bracelet with ID: ' + id);
 	};
 	bc.deleteBracelet = function(id){
-		console.log('Delete Bracelet with ID: ' + id);
+		$.ajax({
+			type: 'DELETE',
+			url: baseURI + '/' + id,
+			contentType: 'application/xml',
+			error: function(xhr, textStatus, errorThrown){
+				console.log(textStatus + ': ' + errorThrown);
+			},
+			complete: function(resp){
+				alert('Bracelet with id ' + id + ' removed');
+				var show_per_page = parseInt($('#show_per_page').val());
+				var current_page = parseInt($('#current_page').val());
+				var start = (current_page == 1) ? 0 : (current_page - 1) * show_per_page;
+				pagination_set = false;
+				bc.getBraceletsPaginated(start, show_per_page);
+			}
+		});		
 	};
 	bc.addPagination = function(items, itemsInDB){
 		var show_per_page = 10;
@@ -63,23 +78,24 @@ var bConfigurator = (function($){
 		var html = '<ul>';
 		html += '<li><a href="javascript:bConfigurator.prev();" id="prev_link">&lt;&lt;</a></li>';
 		for(var i=1;i<=number_of_pages;i++){
-			html += '<li><a class="page_link" href="javascript:bConfigurator.goToPage(' + i + ');" longdesc="' + i + '">' + i + '</a></li>';
+			html += '<li class="pagination_page_li"><a class="page_link" href="javascript:bConfigurator.goToPage(' + i + ');" longdesc="' + i + '">' + i + '</a></li>';
 		}
 		html += '<li><a href="javascript:bConfigurator.next();" id="next_link">&gt;&gt;</a></li>';
 		html += '</ul><input type="hidden" id="current_page" /><input type="hidden" id="show_per_page" />';
 		$('#pagination-container').html(html);
 		$('#current_page').val(current_page);
 		$('#show_per_page').val(show_per_page);
+		$('#page_count').val(number_of_pages);
 		$('#pagination-container .page_link:first').addClass('active_page');
 		pagination_set = true;
 	}
 	bc.prev = function(){
 		var new_page = parseInt($('#current_page').val()) - 1;
-		if($('.active_page').parent('li').prev('li').length == true) bc.goToPage(new_page);
+		if($('.active_page').parent('li').prev('li.pagination_page_li').length == true) bc.goToPage(new_page);
 	}
 	bc.next = function(){	
 		var new_page = parseInt($('#current_page').val()) + 1;
-		if($('.active_page').parent('li').next('li').length == true) bc.goToPage(new_page);
+		if($('.active_page').parent('li').next('li.pagination_page_li').length == true) bc.goToPage(new_page);
 	}
 	bc.goToPage = function(page){
 		var show_per_page = parseInt($('#show_per_page').val());
@@ -96,7 +112,7 @@ var bConfigurator = (function($){
 				html += '<td>' + $(item).attr('size') + '</td>';
 				html += '<td>' + $(item).attr('model') + '</td>';
 				html += '<td>' + $(item).attr('created') + '</td>';
-				html += '<td><a href="javascript:alert(\'edit\');">Edit</a> | <a href="javascript:alert(\'delete\');">Delete</a></td>';
+				html += '<td><a href="javascript:alert(\'edit\');">Edit</a> | <a href="javascript:bConfigurator.deleteBracelet('+ $(item).attr('id') +');">Delete</a></td>';
 			html += '</tr>';
 		return html;
 	}
@@ -127,9 +143,6 @@ var bConfigurator = (function($){
 	}
 	function setNoDataDiv(){
 		$('#data-container').append('<div id="noDataDiv"><span>No Bracelets in DB.</span></div>');
-	}
-	function removeNoDataDiv(){
-		$('#noDataDiv').remove();
 	}
 	return bc;	
 })(jQuery);
