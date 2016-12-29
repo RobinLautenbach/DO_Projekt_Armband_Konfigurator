@@ -60,6 +60,6 @@
     transform: translateX(-50%) translateY(-50%);	
 }
 
-#pagination-container ul li a.active_page{
+#pagination-container ul li.active_page a{
 	color: blue;
 }
