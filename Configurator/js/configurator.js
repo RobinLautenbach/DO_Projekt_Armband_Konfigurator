@@ -16,7 +16,7 @@ var bConfigurator = (function($){
 					},
 					complete: function(resp){
 						removeLoadingDiv();
-						if(resp.getResponseHeader('braceletsInDB') == null){
+						if(resp.getResponseHeader('braceletsInDB') == null || resp.getResponseHeader('braceletsInDB') == 0){
 							setNoDataDiv();
 						}else
 						{
