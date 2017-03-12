@@ -1,0 +1,48 @@
+body{
+	background-image: url(img/verlauf.jpg);
+}
+
+.chooseBall{
+	cursor: pointer;
+}
+
+.chooseBalls{
+	position: relative;
+	margin: 0 auto;
+}
+
+.modal-content{
+	padding-left: 10%;
+	padding-bottom: 5%;
+}
+
+
+
+#bracelet{
+	position: relative;
+	float: left;
+	width: 100%;
+}
+
+.ball{
+	position: absolute;
+	left: 42%;
+	width: 8%;
+	height: 250px;
+	color: black;
+	/*
+	background-color: grey;
+	border: 1px solid black;*/
+	text-align: center;	
+	transform-origin: 100% 100%; /* Drehpunkt ist untere reche Ecke */
+}
+
+.ball:hover{
+	cursor: pointer;
+}
+
+.ball p{
+	background-color: black;
+	margin-top: 0px;
+}
+

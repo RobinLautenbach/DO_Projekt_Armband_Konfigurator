@@ -1,0 +1,48 @@
+.portfolio-item{
+	float: left;
+	width: 33%;
+	padding-right: 3%;
+}
+
+.portfolio-hover-content img{
+	width: 25%;
+}
+
+
+.sizes{	
+	margin: 0 auto;
+	position: relative;
+	margin-left: 30px;
+}
+
+.size-choose{
+	position: relative;
+	float: left;
+	background-size: 50px 50px;
+	height: 50px;
+	width: 50px;
+}
+
+.size-s{
+	background-image: url(../img/portfolio/size-s.png);
+}
+
+.size-s:hover{
+	background-image: url(../img/portfolio/size-s-hover.png);
+}
+
+.size-m{
+	background-image: url(../img/portfolio/size-m.png);
+}
+
+.size-m:hover{
+	background-image: url(../img/portfolio/size-m-hover.png);
+}
+
+.size-l{
+	background-image: url(../img/portfolio/size-l.png);
+}
+
+.size-l:hover{
+	background-image: url(../img/portfolio/size-l-hover.png);
+}

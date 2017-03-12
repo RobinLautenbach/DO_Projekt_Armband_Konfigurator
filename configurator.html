@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DO Projekt Master MI</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Robin Lautenbach, Christoph Caps">
+		<link rel="stylesheet" href="style/css/style.css">
+		<link rel="stylesheet" href="Configurator/css/style.css">
+		
+		<link rel="stylesheet" href="Configurator/css/start.css">
+		
+				
+		<!-- Font Awesome -->
+		<link href="style/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		
+		<!-- Bootstrap-CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		
+		<!-- jquery -->
+		<script src="js/jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+	
+		<div class="container">
+      
+
+      <div class="jumbotron">
+        <h1>OPPISE7EN KONFIGURATOR</h1>
+        <p class="lead">Erstellen Sie ihr individuelles, handgefertigtes <br>Damen- und Herren Bracelet in der <br>bewährten OPPISE7EN Qualität.</p>
+      </div>
+
+
+      <!-- Portfolio Grid Section -->
+      <section id="portfolio" class="bg-light-gray">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">1. Auswahl</h2>
+                      <h3 class="section-subheading text-muted">Wählen Sie ihre Grundkonfiguration.</h3>
+                  </div>
+              </div>
+              <div class="bracelets">
+                  <div class="portfolio-item">
+                      <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <h4>choose a size</h4><br>
+                                  <div class="sizes">
+                                    <div class="size-choose size-s"></div>
+                                    <div class="size-choose size-m"></div>
+                                    <div class="size-choose size-l"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <img src="img/portfolio/basic.jpg" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Basic</h4>
+                          <p class="text-muted">Einfach elegant.</p>
+                      </div>
+                  </div>
+                  <div class="portfolio-item">
+                      <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <h4>choose a size</h4><br>
+                                  <div class="sizes">
+                                    <div class="size-choose size-s"></div>
+                                    <div class="size-choose size-m"></div>
+                                    <div class="size-choose size-l"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <img src="img/portfolio/skull.jpg" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Skull</h4>
+                          <p class="text-muted">Motivation.</p>
+                      </div>
+                  </div>
+                  <div class="portfolio-item">
+                      <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                          <div class="portfolio-hover">
+                              <div class="portfolio-hover-content">
+                                  <h4>choose a size</h4><br>
+                                  <div class="sizes">
+                                    <div class="size-choose size-s"></div>
+                                    <div class="size-choose size-m"></div>
+                                    <div class="size-choose size-l"></div>
+                                  </div>
+                              </div>
+                          </div>
+                          <img src="img/portfolio/lion.jpg" class="img-responsive" alt="">
+                      </a>
+                      <div class="portfolio-caption">
+                          <h4>Lion</h4>
+                          <p class="text-muted">Löwenstark.</p>
+                      </div>
+                  </div>
+                  
+              </div>
+              <a href="#" data-toggle="modal" data-target=".bs-example-modal-lg" style="color:black; text-align: center; position: relative; width: 100% !important; margin-left: 20px">Welche Größe passt mir?</a>
+              
+
+          </div>
+      </section>
+
+       <!-- Portfolio Grid Section -->
+      <section id="configurator" style="height: 1200px; width: 100%" class="bg-light-gray" hidden="true">
+          
+              <div class="row">
+                  <div class="col-lg-12 text-center">
+                      <h2 class="section-heading">2. Konfiguration</h2>
+                      <h3 class="section-subheading text-muted">Lassen Sie Ihrer Kreativität freien Lauf.</h3>
+                  </div>
+              </div>
+            
+
+            <div id="configurator">
+      
+              <!--<?php
+                //for($i=0; $i<6; $i++){
+                //  echo "<div class='ball' id='ball".$i."' data-toggle='modal' data-target='.bs-example-modal-sm'></div>";
+                //}
+              ?>-->
+            </div>
+            
+            
+                      
+
+      </section>
+	
+	
+	
+		<div id="editBracelet">
+		
+			<h3>Modell</h3>
+			<form id="modelForm">
+			  <div class="form-group">
+				<label for="braceletModel">Modell</label>
+				<input type="text" class="form-control" id="braceletModel" placeholder="Modell">
+			  </div>
+			  <div class="form-group">
+				<label for="braceletSize">Größe</label>
+				<input type="text" class="form-control" id="braceletSize" placeholder="Größe">
+			  </div>
+			</form>
+			
+			<h3>Kugeln</h3>
+			<form id="orbsForm">
+			  <div class="form-group">
+				<label for="orbStyle">Kugel</label>
+				<input type="text" class="form-control" id="orbStyle" placeholder="Kugel">
+			  </div>
+			  <div class="form-group">
+				<label for="orbSize">Größe</label>
+				<input type="text" class="form-control" id="orbSize" placeholder="Kugelgröße">
+			  </div>
+			</form>
+			
+			<h3>Pendant</h3>
+			<form id="pendantForm">
+			  <div class="form-group">
+				<label for="pendantModel">Anhängermodell</label>
+				<input type="text" class="form-control" id="pendantModel" placeholder="Wunschanhänger">
+			  </div>
+			  <div class="form-group">
+				<label for="pendantColor">Farbe</label>
+				<input type="text" class="form-control" id="pendantColor" placeholder="Anhängerfarbe">
+			  </div>
+			</form>
+			
+		</div>
+		
+	<button id="generate">Generieren</a>
+	
+	
+	<!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+	
+	<script>
+		$("#generate").on("click", function(){
+			
+			var xmlHeader = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>';
+			var test = $('#orbSize').val();
+			var braceletOrb = '<orb size="'+ $('#orbSize').val() +'" style="'+ $('#orbStyle').val() +'"/>';
+			var braceletOrbs = '<orbs>'+ braceletOrb +'</orbs>';
+			var braceletPendant = '<pendant color="'+$('#pendantColor').val()+'" model="'+$('#pendantModel').val()+'"></pendant>';
+			var braceletModel = '<bracelet name="Löwe Schwarz" model="'+ $('#braceletModel').val() +'" size="'+ $('#braceletSize').val() +'">';
+			
+			var braceletXML = xmlHeader + braceletModel + braceletOrbs + braceletPendant + '</bracelet>';
+			//console.log(braceletXML);
+			
+			
+			$.ajax({
+				type : "POST",
+				url : "http://localhost:8080/BraceletConfiguratorRestfulService/resources/bracelets",
+				data : braceletXML,
+				contentType: "application/xml",
+				success : function() {
+					console.log("erfolgreich");
+				},
+				error : function(error) {
+					console.log("das war nix");
+				}
+			});
+			
+			
+		});
+	</script>
+	</body>
+</html>
