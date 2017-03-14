@@ -1,7 +1,6 @@
 #bracelets{
 	width: 100%;
-	height: 500px;
-	border: 1px solid black;
+	height: 320px;
 	overflow-Y: auto;
 }
 
