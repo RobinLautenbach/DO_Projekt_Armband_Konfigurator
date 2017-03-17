@@ -1,0 +1,16 @@
+****MODERNIZR****
+
+What is Modernizr?
+It’s a collection of superfast tests – or “detects” as we like to call them – which run as your web page loads, then you can use the results to tailor the experience to the user.
+
+Why do I need it?
+All web developers come up against differences between browsers and devices. That’s largely due to different feature sets: the latest versions of the popular browsers can do some awesome things which older browsers can’t – but we still have to support the older ones.
+
+Modernizr makes it easy to deliver tiered experiences: make use of the latest and greatest features in browsers which support them, without leaving less fortunate users high and dry.
+
+
+*****DND HTML5*****
+
+
+
+****DND interact.js****
