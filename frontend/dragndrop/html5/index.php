@@ -9,37 +9,34 @@
 
     <div id="bracelet">
         <div id="palette">
-
             <div class='ball_container palette_ball' id='ball_tiger'>
                 #Tiger
                 <div class="ball" draggable='true'>
-                    <img src='../../img/tiger.png' width='50px'/>
+                    <img src='../../img/tiger.png' width='50px' data-model='tiger'/>
                 </div>
             </div>
 
             <div class='ball_container palette_ball' id='ball_blue'>
                 #Blue
                 <div class="ball" draggable='true'>
-                    <img src='../../img/blue.png' width='50px'/>
+                    <img src='../../img/blue.png' width='50px' data-model='blue'/>
                 </div>
             </div>
 
             <div class='ball_container palette_ball' id='ball_moon'>
                 #Moon
                 <div class="ball" draggable='true'>
-                    <img src='../../img/moon.png' width='50px'/>
+                    <img src='../../img/moon.png' width='50px' data-model='moon'/>
                 </div>
             </div>
 
             <div class='ball_container palette_ball' id='ball_turquoise'  >
                 #Turquoise
                 <div class="ball" draggable='true'>
-                    <img src='../../img/turquoise.png' width='50px'/>
+                    <img src='../../img/turquoise.png' width='50px' data-model='turquoise'/>
                 </div>
             </div>
         </div>
-
-
     </div>
 
 
@@ -68,7 +65,7 @@
 
     // Generate Bracelet HTML Code
     for(var i=0; i < kugelanzahl; i++){
-    html += "<div class='ball_container bracelet_ball' id='ball"+i+"'>"+i+"<div class='ball' draggable='true'><img src='"+stadardKugel+"' width='50px'/></div></div>";
+    html += "<div class='ball_container bracelet_ball' id='ball"+i+"'>"+i+"<div class='ball' draggable='true' data-position='"+i+"'><img src='"+stadardKugel+"' width='50px' data-model='standard'/></div></div>";
     }
 
     bracelet.innerHTML = html;
@@ -77,7 +74,7 @@
     // Generate Kugelformularfelder HTML Code
     var htmlOrbsAll =''
     for(var i=0; i < kugelanzahl; i++){
-    htmlOrbsAll += '<input type="text" class="form-control" id="orbStyle'+i+'" value="'+stadardKugel+'">';
+    htmlOrbsAll += '<input type="text" class="form-control" id="orbStyle'+i+'" value="standard">';
     }
 
     const orbsAll = document.querySelector('#orbsAll');
@@ -155,13 +152,37 @@
 
         // Keine Aktion wenn Target = Source
         if (dragSrcEl != this) {
+            // Entscheidung von wo nach wo gedropped wird
             if (palette_to_bracelet){
                 this.innerHTML = e.dataTransfer.getData('text/html');
+
+//                //Formularverarbeitung
+//                const position = $(this).data('position');
+//                const srcModel = $src.data('model');
+//                //Set data-model as src data-model
+//                this.dataset.model = srcModel;
+//                const targetModel = $(this).data('model');
+//                //insert model in formfield
+//                $('#orbStyle'+position).val(targetModel);
+
+
             } else if (palette_to_palette) {
                 return;
             } else if (bracelet_to_bracelet) {
                 dragSrcEl.innerHTML = this.innerHTML;;
                 this.innerHTML = e.dataTransfer.getData('text/html');
+
+                //Formularverarbeitung
+//                const targetPosition = $(this).data('position');
+//                const srcPosition = $src.data('position');
+//                var srcModel = $src.data('model');
+//                var targetModel = $(this).data('model');
+//                this.dataset.model = srcModel;
+//                $src[0].dataset.model = targetModel;
+//
+//                $('#orbStyle'+targetPosition).val(srcModel);
+//                $('#orbStyle'+srcPosition).val(targetModel);
+
             } else if (bracelet_to_palette) {
                 return;
             }
