@@ -50,8 +50,18 @@ var bConfigurator = (function($){
 			}
 		});		
 	};
-	bc.addBracelet = function(id){
-		console.log('Add Bracelet with ID: ' + id);
+	bc.editBracelet = function(id){
+		$.ajax({
+					type: 'GET',
+					url: baseURI + '/' + id,
+					contentType: 'application/xml',
+					error: function(xhr, textStatus, errorThrown){
+						console.log(textStatus + ': ' + errorThrown);
+					},
+					complete: function(resp){
+						window.location.href = '../../frontend/index.php?braceletToEdit=' + resp.responseXML.toString();
+					}
+				});
 	};
 	bc.deleteBracelet = function(id){
 		$.ajax({
@@ -62,7 +72,6 @@ var bConfigurator = (function($){
 				console.log(textStatus + ': ' + errorThrown);
 			},
 			complete: function(resp){
-				alert('Bracelet with id ' + id + ' removed');
 				var show_per_page = parseInt($('#show_per_page').val());
 				var current_page = parseInt($('#current_page').val());
 				var start = (current_page == 1) ? 0 : (current_page - 1) * show_per_page;
@@ -112,7 +121,7 @@ var bConfigurator = (function($){
 				html += '<td>' + $(item).attr('size') + '</td>';
 				html += '<td>' + $(item).attr('model') + '</td>';
 				html += '<td>' + $(item).attr('created') + '</td>';
-				html += '<td><a href="javascript:alert(\'edit\');">Edit</a> | <a href="javascript:bConfigurator.deleteBracelet('+ $(item).attr('id') +');">Delete</a></td>';
+				html += '<td><a href="javascript:bConfigurator.editBracelet('+ $(item).attr('id') +');">Edit</a> | <a href="javascript:bConfigurator.deleteBracelet('+ $(item).attr('id') +');">Delete</a></td>';
 			html += '</tr>';
 		return html;
 	}

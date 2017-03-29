@@ -1,7 +1,12 @@
+a{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
 #bracelets{
 	width: 100%;
 	height: 320px;
-	overflow-Y: auto;
 }
 
 #pagination-container{
@@ -23,7 +28,7 @@
 	font-weight: bold;
 }
 
-#pagination-container ul li a:hover{
+a:hover, #pagination-container ul li a:hover{
 	color: grey;
 }
 
@@ -48,15 +53,17 @@
 
 #loadingDiv, #noDataDiv{
 	width: 100%;
-	height: 100%;
+	height: 320px;
 	text-align: center;
+	background-color: #FAFAFA;
 }
 
 #loadingDiv span, #noDataDiv span{
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);	
+	font-weight: bold;
 }
 
 #pagination-container ul li.active_page a{
