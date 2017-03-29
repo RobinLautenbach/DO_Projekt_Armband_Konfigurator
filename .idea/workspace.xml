@@ -2,76 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afb03413-1970-4996-b737-67c9881e48cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/fontawesome-webfont.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/blue.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/blue_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/green_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/grey.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/grey_dark.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/grey_dark_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/grey_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/lava.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/moon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/basic.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/lion.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-l-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-l.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-m-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-m.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-s-hover.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/size-s.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/portfolio/skull.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/red_old.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/size/whichsize1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/size/whichsize2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/tiger.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/turquoise.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/verlauf.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/img/white.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap-theme.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap-theme.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap.css.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/dashboard.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/jumbotron-narrow.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/css/sweetalert.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/jquery.dataTables.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/npm.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/bootstrap/js/sweetalert.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/css/agency.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/css/start.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Assets/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/dragndrop.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/index2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/frontend/style.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/js/agency.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/js/agency.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/js/contact_me.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/frontend/js/jqBootstrapValidation.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/example.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/dragndrop/html5/index.php" afterPath="$PROJECT_DIR$/frontend/dragndrop/html5/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/frontend/index.php" afterPath="$PROJECT_DIR$/frontend/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base/Modules/m-configurator/index.php" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Base/Modules/m-configurator/style.css" afterPath="$PROJECT_DIR$/Base/Modules/m-configurator/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -89,18 +25,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+            <state relative-caret-position="437">
+              <caret line="188" column="158" lean-forward="false" selection-start-line="188" selection-start-column="158" selection-end-line="188" selection-end-column="158" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="175" column="28" lean-forward="false" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+            <state relative-caret-position="-205">
+              <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -110,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+              <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -121,8 +57,8 @@
       <file leaf-file-name="dragndrop.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/dragndrop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="727">
-              <caret line="82" column="73" lean-forward="false" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
+            <state relative-caret-position="283">
+              <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="68" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -133,8 +69,8 @@
       <file leaf-file-name="generateBracelet.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="189" lean-forward="false" selection-start-line="10" selection-start-column="189" selection-end-line="10" selection-end-column="189" />
+            <state relative-caret-position="90">
+              <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -145,8 +81,18 @@
       <file leaf-file-name="generateXML.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="555">
+              <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="example.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/example.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -172,11 +118,16 @@
       <find>250</find>
       <find>flex</find>
       <find>pendn</find>
-      <find>50px</find>
       <find>bracel</find>
       <find>cols</find>
       <find>226</find>
       <find>calcPr</find>
+      <find>hover</find>
+      <find>calc</find>
+      <find>label</find>
+      <find>50px</find>
+      <find>each</find>
+      <find>Anhänger</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -205,14 +156,15 @@
         <option value="$PROJECT_DIR$/frontend/index2.php" />
         <option value="$PROJECT_DIR$/Base/Modules/m-configurator/functions.js" />
         <option value="$PROJECT_DIR$/Base/Modules/m-configurator/m-configurator.js" />
-        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js" />
         <option value="$PROJECT_DIR$/Base/Assets/bootstrap/css/jumbotron-narrow.css" />
         <option value="$PROJECT_DIR$/Base/Assets/css/start.css" />
         <option value="$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js" />
-        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js" />
-        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/dragndrop.js" />
-        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/index.php" />
         <option value="$PROJECT_DIR$/Base/Modules/m-configurator/style.css" />
+        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/dragndrop.js" />
+        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js" />
+        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/index.php" />
+        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js" />
+        <option value="$PROJECT_DIR$/Base/Modules/m-configurator/example.xml" />
       </list>
     </option>
   </component>
@@ -224,7 +176,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="40" />
+    <option name="x" value="41" />
     <option name="y" value="23" />
     <option name="width" value="1220" />
     <option name="height" value="974" />
@@ -510,15 +462,15 @@
       <workItem from="1489355563662" duration="4590000" />
       <workItem from="1489492793409" duration="11581000" />
       <workItem from="1490267410591" duration="142000" />
-      <workItem from="1490268108154" duration="36195000" />
+      <workItem from="1490268108154" duration="44799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52508000" />
+    <option name="totallyTimeSpent" value="61112000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="40" y="23" width="1220" height="974" extended-state="0" />
+    <frame x="41" y="23" width="1220" height="974" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -805,14 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/dragndrop/html5/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -837,16 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="189" lean-forward="false" selection-start-line="10" selection-start-column="189" selection-end-line="10" selection-end-column="189" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Base/Assets/img/red_old.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -862,10 +796,18 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js">
+    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="56" lean-forward="false" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+        <state relative-caret-position="-205">
+          <caret line="121" column="21" lean-forward="false" selection-start-line="121" selection-start-column="21" selection-end-line="121" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateBracelet.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -874,8 +816,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/dragndrop.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="727">
-          <caret line="82" column="73" lean-forward="false" selection-start-line="82" selection-start-column="73" selection-end-line="82" selection-end-column="73" />
+        <state relative-caret-position="283">
+          <caret line="81" column="68" lean-forward="true" selection-start-line="81" selection-start-column="45" selection-end-line="81" selection-end-column="68" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/calcPrice.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="66" lean-forward="true" selection-start-line="9" selection-start-column="66" selection-end-line="9" selection-end-column="66" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -884,16 +836,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="228" column="0" lean-forward="false" selection-start-line="228" selection-start-column="0" selection-end-line="228" selection-end-column="0" />
+        <state relative-caret-position="437">
+          <caret line="188" column="158" lean-forward="false" selection-start-line="188" selection-start-column="158" selection-end-line="188" selection-end-column="158" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/style.css">
+    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/generateXML.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="175" column="28" lean-forward="false" selection-start-line="175" selection-start-column="28" selection-end-line="175" selection-end-column="28" />
+        <state relative-caret-position="555">
+          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Base/Modules/m-configurator/example.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
           <folding />
         </state>
       </provider>

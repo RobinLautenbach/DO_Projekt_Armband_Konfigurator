@@ -119,19 +119,17 @@ body{
 
 .pendant__label {
     padding: 1px;
-    padding-bottom: 60px;
+    padding-bottom: 10px;
 }
 
 .pendant__label:hover
 {
-    padding: 0px;
     cursor: pointer;
-    border: 1px solid black;
 }
 
 .pendant__label__image
 {
-    width: 80px;
+    width: 60px;
 }
 
 .pendant__label h4
@@ -167,11 +165,26 @@ body{
     top: 360px
 }
 
+.pendant__label.active img
+{
+    /*background: white;*/
+    border-radius: 40px;
+    border: 4px solid grey;
+    padding:-4px;
+}
+
+
+
 
 /* size-select  */
-
-.size-trigger:checked + .size__label
+.size__trigger
 {
-    background-color: red;
-    border: 1px solid black;
+    display: none;
 }
+
+.size__trigger:checked + .size__label
+{
+    background-color: grey;
+    border-radius: 30px;
+}
+

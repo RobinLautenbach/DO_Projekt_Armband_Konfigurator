@@ -4,7 +4,7 @@
 
 function generateBracelet(container, kugelanzahl, standardkugel, kugelgroesse)
 {
-    var html = container.innerHTML;
+    var html = "";
 
     // Generate Bracelet HTML Code
     for (var i = 0; i < kugelanzahl; i++) {

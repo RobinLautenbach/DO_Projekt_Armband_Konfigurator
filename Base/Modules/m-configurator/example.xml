@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bracelet name="Löwe Schwarz" model="Basic" size="M">
+    <price unit="Euro">41</price>
+    <orbs>
+        <orb position="0" size="8mm" style="standard"/>
+        <orb position="1" size="8mm" style="standard"/>
+        <orb position="2" size="8mm" style="standard"/>
+        <orb position="3" size="8mm" style="standard"/>
+        <orb position="4" size="8mm" style="standard"/>
+        <orb position="5" size="8mm" style="standard"/>
+        <orb position="6" size="8mm" style="standard"/>
+        <orb position="7" size="8mm" style="standard"/>
+        <orb position="8" size="8mm" style="standard"/>
+        <orb position="9" size="8mm" style="standard"/>
+        <orb position="10" size="8mm" style="standard"/>
+        <orb position="11" size="8mm" style="standard"/>
+        <orb position="12" size="8mm" style="standard"/>
+        <orb position="13" size="8mm" style="blue">
+            <premium unit="Euro">0.5</premium>
+        </orb>
+        <orb position="14" size="8mm" style="standard"/>
+        <orb position="15" size="8mm" style="standard"/>
+        <orb position="16" size="8mm" style="standard"/>
+        <orb position="17" size="8mm" style="turquoise"/>
+        <orb position="18" size="8mm" style="tiger">
+            <premium unit="Euro">0.5</premium>
+        </orb>
+        <orb position="19" size="8mm" style="standard"/>
+        <orb position="20" size="8mm" style="standard"/>
+        <orb position="21" size="8mm" style="standard"/>
+        <orb position="22" size="8mm" style="standard"/>
+        <orb position="23" size="8mm" style="standard"/>
+    </orbs>
+    <pendant color="gold" model="lion">
+        <premium unit="Euro">5</premium>
+    </pendant>
+</bracelet>

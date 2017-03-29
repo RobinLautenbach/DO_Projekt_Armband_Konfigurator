@@ -124,42 +124,43 @@
 
         <div id="palette" class="col-md-2" >
             <h3>Palette</h3>
-            <div class='ball_container palette_ball' id='ball_tiger'>
-                <h4>Tiger</h4>
+            <div class='ball_container palette_ball' id='ball_grey'  >
+                <h4>Grey</h4>
                 <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/tiger.png' width='40px' data-model='tiger' data-price='0' />
-                </div>
-            </div>
-            <div class='ball_container palette_ball' id='ball_blue'>
-                <h4>Blue</h4>
-                <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/blue.png' width='40px' data-model='blue' data-price='1' />
-                </div>
-            </div>
-            <div class='ball_container palette_ball' id='ball_moon'>
-                <h4>Moon</h4>
-                <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/moon.png' width='40px' data-model='moon' data-price='1'/>
-                </div>
-            </div>
-            <div class='ball_container palette_ball' id='ball_turquoise'  >
-                <h4>Turquoise</h4>
-                <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/turquoise.png' width='40px' data-model='turquoise' data-price='1'/>
+                    <img src='../../Assets/img/grey.png' width='40px' data-model='grey' data-price='0'/>
                 </div>
             </div>
             <div class='ball_container palette_ball' id='ball_lava'  >
                 <h4>Lava</h4>
                 <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/lava.png' width='40px' data-model='lava' data-price='1'/>
+                    <img src='../../Assets/img/lava.png' width='40px' data-model='lava' data-price='0'/>
                 </div>
             </div>
-            <div class='ball_container palette_ball' id='ball_grey'  >
-                <h4>Grey</h4>
+            <div class='ball_container palette_ball' id='ball_turquoise'  >
+                <h4>Turquoise</h4>
                 <div class="ball" draggable='true'>
-                    <img src='../../Assets/img/grey.png' width='40px' data-model='grey' data-price='1.5'/>
+                    <img src='../../Assets/img/turquoise.png' width='40px' data-model='turquoise' data-price='0'/>
                 </div>
             </div>
+            <div class='ball_container palette_ball' id='ball_tiger'>
+                <h4>Tiger (+ 0,5€)</h4>
+                <div class="ball" draggable='true'>
+                    <img src='../../Assets/img/tiger.png' width='40px' data-model='tiger' data-price='0.5' />
+                </div>
+            </div>
+            <div class='ball_container palette_ball' id='ball_blue'>
+                <h4>Blue (+ 0,5€)</h4>
+                <div class="ball" draggable='true'>
+                    <img src='../../Assets/img/blue.png' width='40px' data-model='blue' data-price='0.5' />
+                </div>
+            </div>
+            <div class='ball_container palette_ball' id='ball_moon'>
+                <h4>Moon (+ 1€)</h4>
+                <div class="ball" draggable='true'>
+                    <img src='../../Assets/img/moon.png' width='40px' data-model='moon' data-price='1'/>
+                </div>
+            </div>
+
 
             <div class="palette__change" draggable="true">
                 <h5>Alle ändern</h5>
@@ -175,17 +176,17 @@
             <div class="pendant" data-price="5">
                 <input class="pendant__trigger" type="radio" id="pendant-lion-black" name="pendant__radio" />
                 <div class="pendant__content">
-                    <img src="../../Assets/img/pendant-lion-black.png" alt="" class="pendant__content__image">
+                    <img src="../../Assets/img/pendant-lion-black.png" alt="" class="pendant__content__image" data-price="5" data-model="lion" data-color="black">
                 </div>
 
-                <input class="pendant__trigger" type="radio" id="pendant-lion-gold" name="pendant__radio" />
+                <input class="pendant__trigger" type="radio" id="pendant-lion-gold" name="pendant__radio"/>
                 <div class="pendant__content">
-                    <img src="../../Assets/img/pendant-lion-gold.png" alt="" class="pendant__content__image">
+                    <img src="../../Assets/img/pendant-lion-gold.png" alt="" class="pendant__content__image" data-price="5" data-model="lion" data-color="gold">
                 </div>
 
                 <input class="pendant__trigger" type="radio" id="pendant-lion-rose" name="pendant__radio" />
                 <div class="pendant__content">
-                    <img src="../../Assets/img/pendant-lion-rose.png" alt="" class="pendant__content__image">
+                    <img src="../../Assets/img/pendant-lion-rose.png" alt="" class="pendant__content__image" data-price="5" data-model="lion" data-color="rose">
                 </div>
             </div>
 
@@ -194,18 +195,18 @@
 
 
         <div id="pendant_select" class="col-md-4" >
-            <h4>Anhänger</h4><br>
+            <h4>Anhänger (+ 5€)</h4>
             <!-- TODO iterate through existing XML elements -->
             <label class="pendant__label" for="pendant-lion-black">
-                <h4 class=pendant__label__headline">Black</h4>
+                <h4 class=pendant__label__headline" hidden="true"></h4>
                 <img src="../../Assets/img/pendant-lion-black.png" alt="" class="pendant__label__image">
             </label>
             <label class="pendant__label" for="pendant-lion-gold">
-                <h4 class=pendant__label__headline">Gold</h4>
+                <h4 class=pendant__label__headline" hidden="true"></h4>
                 <img src="../../Assets/img/pendant-lion-gold.png" alt="" class="pendant__label__image">
             </label>
             <label class="pendant__label" for="pendant-lion-rose">
-                <h4 class=pendant__label__headline">Rose</h4>
+                <h4 class=pendant__label__headline" hidden="true"></h4>
                 <img src="../../Assets/img/pendant-lion-rose.png" alt="" class="pendant__label__image">
             </label>
             <!-- TODO first radio checked -->
@@ -215,22 +216,20 @@
         <div id="size_select" class="col-md-4">
             <h4>Wähle die Größe</h4><br>
 
-            <input class="size__trigger" type="radio" id="size-s-trigger" name="size__radio" />
+            <input class="size__trigger size-s" type="radio" id="size-s-trigger" name="size__radio"  />
             <label class="size__label" for="size-s-trigger">
                 <div class="size-choose size-s"></div>
             </label>
 
-            <input class="size__trigger" type="radio" id="size-m-trigger" name="size__radio" />
+            <input class="size__trigger size-m" type="radio" id="size-m-trigger" name="size__radio" checked="checked"/>
             <label class="size__label" for="size-m-trigger">
                 <div class="size-choose size-m"></div>
             </label>
 
-            <input class="size__trigger" type="radio" id="size-l-trigger" name="size__radio" />
+            <input class="size__trigger size-l" type="radio" id="size-l-trigger" name="size__radio" />
             <label class="size__label" for="size-l-trigger">
                 <div class="size-choose size-l"></div>
             </label>
-
-
 
 
         </div>
@@ -254,9 +253,6 @@
                 <p><span class="counter">35</span> Euro</p>
             </div>
         </div>
-
-
-
     </section>
 
 
@@ -268,11 +264,11 @@
             <form id="modelForm">
                 <div class="form-group">
                     <label for="braceletModel">Modell</label>
-                    <input type="text" class="form-control" id="braceletModel" placeholder="Modell">
+                    <input type="text" class="form-control" id="braceletModel" placeholder="Modell" value="Basic">
                 </div>
                 <div class="form-group">
                     <label for="braceletSize">Größe</label>
-                    <input type="text" class="form-control" id="braceletSize" placeholder="Größe">
+                    <input type="text" class="form-control" id="braceletSize" placeholder="Größe" value="M">
                 </div>
             </form>
             <h3>Kugeln</h3>
@@ -282,7 +278,7 @@
                 </div>
                 <div class="form-group">
                     <label for="orbSize">Größe</label>
-                    <input type="text" class="form-control" id="orbSize" placeholder="Kugelgröße">
+                    <input type="text" class="form-control" id="orbSize" placeholder="Kugelgröße" value="8mm">
                 </div>
             </form>
             <h3>Pendant</h3>
@@ -322,11 +318,26 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
 <script>
-    $('.size-choose').on('click', function() {
+    $( document ).ready(function() {
+        var stadardkugel = '../../Assets/img/grey.png';
+        var kugelgroesse = '8mm';
+        var kugelanzahl = 24;
+
+        const bracelet = document.querySelector('#bracelet');
+
+        //Function for generating bracelet
+        generateBracelet(bracelet, kugelanzahl, stadardkugel, kugelgroesse);
+        dragNDrop();
+    });
+</script>
+
+<script>
+    $('.size__trigger').change(function(){
+
         // Vars
         var stadardkugel = '../../Assets/img/grey.png';
         var kugelgroesse = '8mm';
-        var kugelanzahl = 22;
+        var kugelanzahl = 24;
 
         if ($(this).hasClass("size-s")) {
             $('#braceletSize').val('S');
@@ -359,6 +370,25 @@
 
         dragNDrop();
 
+    });
+
+
+
+    $(".pendant__label").on("click", function()
+    {
+        $(".pendant__label").removeClass("active");
+        $(this).addClass("active")
+
+        const bracelet = $('#bracelet');
+        const braceletprice = $('#braceletprice');
+        calcPrice(bracelet, braceletprice);
+    });
+
+    $(".pendant__label").on("mouseup", function()
+    {
+        const bracelet = $('#bracelet');
+        const braceletprice = $('#braceletprice');
+        calcPrice(bracelet, braceletprice);
     });
 
 

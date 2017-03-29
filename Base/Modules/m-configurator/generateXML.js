@@ -10,20 +10,49 @@
 
         var orbGroup = '';
 
-
         //ORBSTYLE AUS IMAGE HOLEN
+        $('#bracelet').find('.ball').each(function(i, obj) {
+            const orbModel = $(obj).find('img').data("model");
+            const orbPrice = $(obj).find('img').data("price");
+            const orbPosition = $(obj).data("position");
 
-        $('.orbStyle').each(function(i, obj) {
-            const $orbStyle = $(obj).val()
-            var braceletOrb = '<orb size="'+ $('#orbSize').val() +'" style="'+ $(obj).val() +'"/>';
+            //if orb is premium
+            if (orbPrice != 0){
+                const premiumTag = '<premium unit="Euro">'+orbPrice+'</premium>';
+                var braceletOrb = '<orb position="'+ orbPosition +'" size="'+ $('#orbSize').val() +'" style="'+ orbModel +'">' + premiumTag + '</orb>';
+            } else {
+                var braceletOrb = '<orb position="'+ orbPosition +'" size="'+ $('#orbSize').val() +'" style="'+ orbModel +'"/>';
+            }
             orbGroup += braceletOrb;
         });
 
-        var braceletOrbs = '<orbs>'+ orbGroup +'</orbs>';
-        var braceletPendant = '<pendant color="'+$('#pendantColor').val()+'" model="'+$('#pendantModel').val()+'"></pendant>';
-        var braceletModel = '<bracelet name="Löwe Schwarz" model="'+ $('#braceletModel').val() +'" size="'+ $('#braceletSize').val() +'">';
+        //GET PENDANT STYLE AND PRICE
 
-        var braceletXML = xmlHeader + braceletModel + braceletOrbs + braceletPendant + '</bracelet>';
+        var pendantPrice;
+        var pendantModel;
+        var pendantColor;
+
+        $('.pendant').find('.pendant__content').each(function(i, content) {
+            if ($(content).css('display') == 'block'){
+                pendantPrice = $(content).find('img').data("price");
+                pendantModel = $(content).find('img').data("model");
+                pendantColor = $(content).find('img').data("color");
+            }
+        });
+
+        //if prendant is premium
+        var braceletPendant;
+        if (pendantPrice != 0){
+            braceletPendant = '<pendant color="'+ pendantColor +'" model="'+pendantModel+'"><premium unit="Euro">'+ pendantPrice +'</premium></pendant>';
+        } else {
+            braceletPendant = '<pendant color="'+ pendantColor +'" model="'+pendantModel+'" />';
+        };
+
+        var braceletOrbs = '<orbs>'+ orbGroup +'</orbs>';
+        var braceletModel = '<bracelet name="Löwe Schwarz" model="'+ $('#braceletModel').val() +'" size="'+ $('#braceletSize').val() +'">';
+        var braceletPrice = '<price unit="Euro">'+ $('#price_total').find('.counter').html() +'</price>';
+
+        var braceletXML = xmlHeader + braceletModel + braceletPrice + braceletOrbs + braceletPendant + '</bracelet>';
         console.log(braceletXML);
 
 
