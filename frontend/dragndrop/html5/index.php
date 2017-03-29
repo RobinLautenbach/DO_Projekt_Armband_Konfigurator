@@ -91,6 +91,11 @@
 
 
 <script>
+
+    //****
+    //* DRAG N DROP FUNCTIONS
+    //****
+
     var dragSrcEl = null;
 
     function handleDragStart(e) {
@@ -218,9 +223,5 @@
         col.addEventListener('drop', handleDrop, false);
         col.addEventListener('dragend', handleDragEnd, false);
     });
-
-
-
-
 </script>
 </html>

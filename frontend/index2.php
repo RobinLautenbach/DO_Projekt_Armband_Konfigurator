@@ -22,13 +22,44 @@
     <link href="css/agency.min.css" rel="stylesheet">
 
     <link href="css/start.css" rel="stylesheet">
-    <link href="configurator.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
  
   </head>
 
   <body>
+  <!-- bracelet -->
+  <div id="bracelet">
+      <div id="palette">
+          <div class='ball_container palette_ball' id='ball_tiger'>
+              #Tiger
+              <div class="ball" draggable='true'>
+                  <img src='img/tiger.png' width='50px' data-model='tiger'/>
+              </div>
+          </div>
 
+          <div class='ball_container palette_ball' id='ball_blue'>
+              #Blue
+              <div class="ball" draggable='true'>
+                  <img src='img/blue.png' width='50px' data-model='blue'/>
+              </div>
+          </div>
+
+          <div class='ball_container palette_ball' id='ball_moon'>
+              #Moon
+              <div class="ball" draggable='true'>
+                  <img src='img/moon.png' width='50px' data-model='moon'/>
+              </div>
+          </div>
+
+          <div class='ball_container palette_ball' id='ball_turquoise'  >
+              #Turquoise
+              <div class="ball" draggable='true'>
+                  <img src='img/turquoise.png' width='50px' data-model='turquoise'/>
+              </div>
+          </div>
+      </div>
+  </div>
 
     <!--Modal-->
               <!-- Großes Modal -->
@@ -170,16 +201,38 @@
 			</div>
 
 
-
-          <style>
-              .ball.over {
-                  border: 2px dashed #000;
-              }
-          </style>
-
-
-			<div id="bracelet">
-			</div>
+<!--          <!-- bracelet -->-->
+<!--          <div id="bracelet">-->
+<!--              <div id="palette">-->
+<!--                  <div class='ball_container palette_ball' id='ball_tiger'>-->
+<!--                      #Tiger-->
+<!--                      <div class="ball" draggable='true'>-->
+<!--                          <img src='img/tiger.png' width='50px' data-model='tiger'/>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!---->
+<!--                  <div class='ball_container palette_ball' id='ball_blue'>-->
+<!--                      #Blue-->
+<!--                      <div class="ball" draggable='true'>-->
+<!--                          <img src='img/blue.png' width='50px' data-model='blue'/>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!---->
+<!--                  <div class='ball_container palette_ball' id='ball_moon'>-->
+<!--                      #Moon-->
+<!--                      <div class="ball" draggable='true'>-->
+<!--                          <img src='img/moon.png' width='50px' data-model='moon'/>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!---->
+<!--                  <div class='ball_container palette_ball' id='ball_turquoise'  >-->
+<!--                      #Turquoise-->
+<!--                      <div class="ball" draggable='true'>-->
+<!--                          <img src='img/turquoise.png' width='50px' data-model='turquoise'/>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--          </div>-->
 			
       </section>
 
@@ -219,9 +272,10 @@
 				  </div>
 				</form>
 			</div>
-			
+
 			<button id="generate">Generieren</button>
 		</section>
+
 		<footer class="footer">
 			<p>&copy; Oppi7 2016</p>
 		</footer>
@@ -235,31 +289,14 @@
     <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
-
 	
     <script>
-    $( document ).ready(function() {
-		// Cache your elements:
-		/*var $sizechoose = document.getElementsByClassName('size-choose');
 
-		// You nice function:
-		function myPopup() {
-			console.log( this );
-			if(this.getAttribute("data-size") == 'S'){
-				console.log('huibuh');
-			}
-		}
-
-		// Assign a click event handler to every element:
-		for(var i=0; i<$sizechoose.length; i++) {
-			$sizechoose[i].onclick = myPopup;
-		}*/
-		
-        $('.size-choose').on('click', function(){		  
+        $('.size-choose').on('click', function(){
 			var stadardKugel = 'img/grey.png';
 			var kugelgroesse = '8mm';
-			var kugelanzahl = 0;
-			  
+			var kugelanzahl = 22;
+
 			if ($(this).hasClass("size-s")){
 				$('#braceletSize').val('S');
 				kugelanzahl = 22;
@@ -272,7 +309,7 @@
 				$('#braceletSize').val('L');
 				var kugelanzahl = 26;
 			}
-			  
+
 			if ($(this).hasClass("basic")){
 				$('#braceletModel').val('Basic');
 			} else if ($(this).hasClass("skull")){
@@ -280,74 +317,83 @@
 			} else{
 				$('#braceletModel').val('Lion');
 			}
-			
+
 			document.querySelector('#orbSize').value = kugelgroesse;
-			  
-					  
-			  
-			//Generate Platzhalter:var kugelanzahl = 24;
-				
-			var degree = 360/ kugelanzahl;
-			var html = '';
-			var degree_total = 0;
-			
-			for(var i=0; i < kugelanzahl; i++){
-				html += "<div class='ball' id='ball"+i+"' draggable='true' data-ball-number='"+i+"' data-toggle='modal' data-target='.bs-example-modal-sm'>"+i+"<img src='"+stadardKugel+"' width='90%'/></div>";
-			}
-			
-			const bracelet = document.querySelector('#bracelet');
-			bracelet.innerHTML = html;
-				
-			//Generate Kugelformularfelder
-			var htmlOrbsAll =''
-			for(var i=0; i < kugelanzahl; i++){
-				htmlOrbsAll += '<input type="text" class="form-control orbStyle" id="orbStyle'+i+'" value="'+stadardKugel+'">';
-			}
-			
-			const orbsAll = document.querySelector('#orbsAll');
-			orbsAll.innerHTML = htmlOrbsAll;
-				
-				
-				
-			//---- Change Ball -----
-			$('.ball').on('click', function(){
-				var test = $(this);
-				console.log(test.data("ball-number"));
-				var id = $(this).attr('id');
-				console.log(id);
-				$('.ballid').html(id);
-			});
-			
-			$('.chooseBall').on('click', function(){
-				var id = $('.ballid').html();
-				var choosenColor = $(this).attr('src');
-				console.log(choosenColor);
-				//orb felder füllen
-				var numberPattern = /\d+/g;
-				var pureid = id.match( numberPattern )
-				$('#orbStyle'+pureid).val(choosenColor);
-				
-				$('#'+id).find('img').attr("src",choosenColor);
-				
-				//$('#'+id).css('background-image', 'url('+choosenColor+')');
-				$('.bs-example-modal-sm').modal('toggle')
-			});
-			
-			
-			//---- rotate div boxes ----
-			for(var i=0; i < kugelanzahl; i++){
-				degree_total = degree_total + degree;
-				$('#ball'+i).css({ 'transform': 'rotate(' + degree_total + 'deg)'});
-			}
-		  
-		  
+
+
+            // Calc Rotation
+            var degree = 360/ kugelanzahl;
+            var degree_total = 0;
+
+            const bracelet = document.querySelector('#bracelet');
+            var html = bracelet.innerHTML;
+
+
+            // Generate Bracelet HTML Code
+            for(var i=0; i < kugelanzahl; i++){
+                html += "<div class='ball_container bracelet_ball' id='ball"+i+"'>"+i+"<div class='ball' draggable='true' data-position='"+i+"'><img src='"+stadardKugel+"' width='50px' data-model='standard'/></div></div>";
+            }
+
+            bracelet.innerHTML = html;
+
+
+            // Generate Kugelformularfelder HTML Code
+            var htmlOrbsAll =''
+            for(var i=0; i < kugelanzahl; i++){
+                htmlOrbsAll += '<input type="text" class="form-control" id="orbStyle'+i+'" value="standard">';
+            }
+
+            const orbsAll = document.querySelector('#orbsAll');
+            orbsAll.innerHTML = htmlOrbsAll;
+
+
+            // Rotate Bracelet Balls
+            for(var i=0; i < kugelanzahl; i++){
+                degree_total = degree_total + degree;
+                $('#ball'+i).css({ 'transform': 'rotate(' + degree_total + 'deg)'});
+            }
+
+
+//			//---- Change Ball -----
+//			$('.ball').on('click', function(){
+//				var test = $(this);
+//				console.log(test.data("ball-number"));
+//				var id = $(this).attr('id');
+//				console.log(id);
+//				$('.ballid').html(id);
+//			});
+//
+//			$('.chooseBall').on('click', function(){
+//				var id = $('.ballid').html();
+//				var choosenColor = $(this).attr('src');
+//				console.log(choosenColor);
+//				//orb felder füllen
+//				var numberPattern = /\d+/g;
+//				var pureid = id.match( numberPattern )
+//				$('#orbStyle'+pureid).val(choosenColor);
+//
+//				$('#'+id).find('img').attr("src",choosenColor);
+//
+//				//$('#'+id).css('background-image', 'url('+choosenColor+')');
+//				$('.bs-example-modal-sm').modal('toggle')
+//			});
+
+
+
+
+
 			$('#portfolio').hide();
 			$('#configurator').fadeIn(2000);
-        });   
-    });
+        });
     </script>
 
+
+
     <script>
+
+        //****
+        //* DRAG N DROP FUNCTIONS
+        //****
 
         var dragSrcEl = null;
 
@@ -358,6 +404,8 @@
             dragSrcEl = this;
 
             e.dataTransfer.effectAllowed = 'move';
+
+            //innerHTML von Draggable in Data
             e.dataTransfer.setData('text/html', this.innerHTML);
         }
 
@@ -387,11 +435,61 @@
                 e.stopPropagation(); // Stops some browsers from redirecting.
             }
 
-            // Don't do anything if dropping the same column we're dragging.
+            this.classList.remove('over');  // this / e.target is previous target element.
+
+            //Target and Source Variables
+            const $target = $(e.target);
+            const $src = $(dragSrcEl);
+
+            //Target and Source Categories
+            const target_is_bracelet = $target.parents('.ball_container').hasClass('bracelet_ball');
+            const target_is_palette = $target.parents('.ball_container').hasClass('palette_ball');
+            const src_is_bracelet =  $src.parents('.ball_container').hasClass('bracelet_ball');
+            const src_is_palette = $src.parents('.ball_container').hasClass('palette_ball');
+
+            //Statements:
+            const palette_to_bracelet = src_is_palette && target_is_bracelet;
+            const palette_to_palette = src_is_palette && target_is_palette;
+            const bracelet_to_bracelet = src_is_bracelet && target_is_bracelet;
+            const bracelet_to_palette = src_is_bracelet && target_is_palette;
+
+
+            // Keine Aktion wenn Target = Source
             if (dragSrcEl != this) {
-                // Set the source column's HTML to the HTML of the columnwe dropped on.
-                dragSrcEl.innerHTML = this.innerHTML;
-                this.innerHTML = e.dataTransfer.getData('text/html');
+                // Entscheidung von wo nach wo gedropped wird
+                if (palette_to_bracelet){
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+
+//                //Formularverarbeitung
+//                const position = $(this).data('position');
+//                const srcModel = $src.data('model');
+//                //Set data-model as src data-model
+//                this.dataset.model = srcModel;
+//                const targetModel = $(this).data('model');
+//                //insert model in formfield
+//                $('#orbStyle'+position).val(targetModel);
+
+
+                } else if (palette_to_palette) {
+                    return;
+                } else if (bracelet_to_bracelet) {
+                    dragSrcEl.innerHTML = this.innerHTML;;
+                    this.innerHTML = e.dataTransfer.getData('text/html');
+
+                    //Formularverarbeitung
+//                const targetPosition = $(this).data('position');
+//                const srcPosition = $src.data('position');
+//                var srcModel = $src.data('model');
+//                var targetModel = $(this).data('model');
+//                this.dataset.model = srcModel;
+//                $src[0].dataset.model = targetModel;
+//
+//                $('#orbStyle'+targetPosition).val(srcModel);
+//                $('#orbStyle'+srcPosition).val(targetModel);
+
+                } else if (bracelet_to_palette) {
+                    return;
+                }
             }
 
             return false;
@@ -405,6 +503,16 @@
             });
         }
 
+        //FindParentBySelector Method
+        function findParentBySelector(elm, selector) {
+            var all = document.querySelectorAll(selector);
+            var cur = elm.parentNode;
+            while(cur && !collectionHas(all, cur)) { //keep going up until you find a match
+                cur = cur.parentNode; //go up
+            }
+            return cur; //will return null if not found
+        }
+
         var cols = document.querySelectorAll('#bracelet .ball');
         [].forEach.call(cols, function(col) {
             col.addEventListener('dragstart', handleDragStart, false);
@@ -414,9 +522,11 @@
             col.addEventListener('drop', handleDrop, false);
             col.addEventListener('dragend', handleDragEnd, false);
         });
+    </script>
 
 
 
+    <script>
         //generate XML for validation:
 
         $("#generate").on("click", function(){
@@ -428,7 +538,7 @@
 
 
             //ORBSTYLE AUS IMAGE HOLEN
-            x
+
             $('.orbStyle').each(function(i, obj) {
                 const $orbStyle = $(obj).val()
                 var braceletOrb = '<orb size="'+ $('#orbSize').val() +'" style="'+ $(obj).val() +'"/>';

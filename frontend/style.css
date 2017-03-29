@@ -1,0 +1,68 @@
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+
+#palette
+{
+    position: absolute;
+    top: 600px;
+}
+
+.palette_ball
+{
+    position: relative;
+    float: left;
+}
+
+body{
+    position: relative;
+    width: 900px;
+    background-image: url(img/verlauf.jpg);
+}
+
+#bracelet{
+    margin-left: 500px;
+    position: relative;
+    float: left;
+    width: 600px;
+    height: 600px;
+}
+
+.bracelet_ball{
+    position: absolute;
+    height: 250px;
+    text-align: center;
+    transform-origin: 100% 100%; /* Drehpunkt ist untere reche Ecke */
+}
+
+
+
+.ball:hover{
+    cursor: pointer;
+}
+
+.ball p{
+    background-color: black;
+    margin-top: 0px;
+}
+
+.ball
+{
+    border: 0;
+    padding: 1px;
+}
+
+.ball.over {
+    border: 1px dashed #000;
+    padding: 0px;
+    border-radius: 25px;
+
+}

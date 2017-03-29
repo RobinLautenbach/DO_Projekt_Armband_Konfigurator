@@ -1,0 +1,177 @@
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    /* Required to make elements draggable in old WebKit */
+    -khtml-user-drag: element;
+    -webkit-user-drag: element;
+}
+
+
+
+
+
+body{
+    background-image: url(../../Assets/img/verlauf.jpg);
+}
+
+
+.m-configurator__builder{
+    position: relative;
+}
+
+#bracelet{
+    /*margin: 0 auto;*/
+    height: 600px;
+}
+
+.bracelet_ball{
+    position: absolute;
+    left: 40%;
+    height: 200px;
+    text-align: center;
+    transform-origin: 100% 100%; /* Drehpunkt ist untere reche Ecke */
+}
+
+
+
+.ball:hover{
+    cursor: pointer;
+}
+
+.ball p{
+    background-color: black;
+    margin-top: 0px;
+}
+
+.ball
+{
+    border: 0;
+    padding: 1px;
+}
+
+.ball.over {
+    border: 1px dashed #000;
+    padding: 0px;
+    border-radius: 25px;
+
+}
+
+/** Palette Styles **/
+
+#palette
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.palette_ball
+{
+    position: relative;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.palette_ball h4
+{
+    font-size: 10px;
+}
+
+.palette__change
+{
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    border: 1px dotted grey;
+}
+
+.palette__change h5
+{
+    line-height: 80px;
+}
+
+
+
+/** Price Styles **/
+
+#braceletprice
+{
+
+}
+
+#braceletprice h4
+ {
+     font-size: 14px;
+ }
+
+#braceletprice p
+{
+    font-size: 14px;
+}
+
+
+/** Pendant Styles **/
+
+.pendant__label {
+    padding: 1px;
+    padding-bottom: 60px;
+}
+
+.pendant__label:hover
+{
+    padding: 0px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.pendant__label__image
+{
+    width: 80px;
+}
+
+.pendant__label h4
+{
+    font-size: 14px;
+}
+
+.pendant__trigger
+{
+    display: none;
+}
+
+.pendant__content
+{
+    display: none;
+}
+
+.pendant__content
+{
+    display: none;
+}
+
+.pendant__content__image
+{
+    width: 80px;
+}
+
+.pendant__trigger:checked + .pendant__content
+{
+    display: block;
+    position: absolute;
+    left: 225px;
+    top: 360px
+}
+
+
+/* size-select  */
+
+.size-trigger:checked + .size__label
+{
+    background-color: red;
+    border: 1px solid black;
+}
