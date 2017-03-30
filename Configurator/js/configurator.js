@@ -2,6 +2,7 @@ var bConfigurator = (function($){
 	var bc = {};
 	var baseURI = 'http://localhost:8080/BraceletConfiguratorRestfulService/resources/bracelets';
 	var pagination_set = false;
+	var show_per_page = 10;
 	bc.getBraceletsPaginated = function(start, size){
 			if(start >= 0 && size >= 0){
 				$.ajax({
@@ -12,15 +13,18 @@ var bConfigurator = (function($){
 					},
 					error: function(xhr, textStatus, errorThrown){
 						removeLoadingDiv();
+						if(xhr.getResponseHeader('braceletsInDB') == null || xhr.getResponseHeader('braceletsInDB') == 0){
+							setNoDataDiv();
+						}
 						console.log(textStatus + ': ' + errorThrown);
 					},
-					complete: function(resp){
+					success: function(data, status, xhr){
 						removeLoadingDiv();
-						if(resp.getResponseHeader('braceletsInDB') == null || resp.getResponseHeader('braceletsInDB') == 0){
+						if(xhr.getResponseHeader('braceletsInDB') == null || xhr.getResponseHeader('braceletsInDB') == 0){
 							setNoDataDiv();
 						}else
 						{
-							listBracelets(resp.responseXML, resp.getResponseHeader('braceletsInDB'));
+							listBracelets(xhr.responseXML, xhr.getResponseHeader('braceletsInDB'));
 						}
 					}
 				});
@@ -34,9 +38,9 @@ var bConfigurator = (function($){
 				removeLoadingDiv();
 				console.log(textStatus + ': ' + errorThrown);
 			},
-			complete: function(resp){
-				console.log("Bracelets in DB:" + resp.getResponseHeader('braceletsInDB'));
-				listBracelets(resp.responseXML);
+			success: function(data, status, xhr){
+				console.log("Bracelets in DB:" + xhr.getResponseHeader('braceletsInDB'));
+				listBracelets(xhr.responseXML);
 			}
 		});		
 	};
@@ -44,9 +48,9 @@ var bConfigurator = (function($){
 		$.ajax({
 			type: 'GET',
 			url: baseURI,
-			complete: function(resp){
-				console.log("Bracelets in DB:" + resp.getResponseHeader('braceletsInDB'));
-				listBracelets(resp.responseXML);
+			success: function(data, status, xhr){
+				console.log("Bracelets in DB:" + xhr.getResponseHeader('braceletsInDB'));
+				listBracelets(xhr.responseXML);
 			}
 		});		
 	};
@@ -58,8 +62,8 @@ var bConfigurator = (function($){
 					error: function(xhr, textStatus, errorThrown){
 						console.log(textStatus + ': ' + errorThrown);
 					},
-					complete: function(resp){
-						window.location.href = '../../frontend/index.php?braceletToEdit=' + resp.responseXML.toString();
+					success: function(data, status, xhr){
+						window.location.href = '../../frontend/index.php?braceletToEdit=' + xhr.responseXML.toString();
 					}
 				});
 	};
@@ -71,17 +75,20 @@ var bConfigurator = (function($){
 			error: function(xhr, textStatus, errorThrown){
 				console.log(textStatus + ': ' + errorThrown);
 			},
-			complete: function(resp){
-				var show_per_page = parseInt($('#show_per_page').val());
+			success: function(data, status, xhr){
 				var current_page = parseInt($('#current_page').val());
-				var start = (current_page == 1) ? 0 : (current_page - 1) * show_per_page;
-				pagination_set = false;
+				var start;
+				if($('#data-container > table > tbody tr').length == 2 && current_page != 1){
+					pagination_set = false;
+					current_page-=1;
+					$('#current_page').val(current_page);
+				}
+				start = (current_page == 1) ? 0 : (current_page - 1) * show_per_page;
 				bc.getBraceletsPaginated(start, show_per_page);
 			}
 		});		
 	};
 	bc.addPagination = function(items, itemsInDB){
-		var show_per_page = 10;
 		var number_of_pages = Math.ceil(itemsInDB/show_per_page);
 		var current_page;
 		$('#current_page').length == 0 ? current_page = 1 : current_page = parseInt($('#current_page').val());
@@ -107,7 +114,6 @@ var bConfigurator = (function($){
 		if($('.active_page').next('li.pagination_page_li').length == true) bc.goToPage(new_page);
 	}
 	bc.goToPage = function(page){
-		var show_per_page = parseInt($('#show_per_page').val());
 		var start = (page == 1) ? 0 : (page - 1) * show_per_page;
 		$('#pagination-container ul li.active_page').removeClass('active_page');
 		$('.pagination_page_li a[longdesc=' + page + ']').parent('li').addClass('active_page');
@@ -151,7 +157,8 @@ var bConfigurator = (function($){
 		$('#loadingDiv').remove();
 	}
 	function setNoDataDiv(){
-		$('#data-container').append('<div id="noDataDiv"><span>No Bracelets in DB.</span></div>');
+		$('#bracelets').empty();
+		$('#bracelets').append('<div id="noDataDiv"><span>No Bracelets in DB.</span></div>');
 	}
 	return bc;	
 })(jQuery);
